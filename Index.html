@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .chat-container {
+            width: 100%;
+            max-width: 400px; 
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .chat-messages {
+            height: 300px;
+            overflow-y: scroll;
+            padding: 10px;
+        }
+        .message {
+            background-color: #f2f2f2;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+        .user-message {
+            background-color: #DCF8C6;
+            align-self: flex-end;
+        }
+        .profile-pic {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-left: 10px;
+        }
+        .message-text {
+            max-width: 70%; 
+            word-wrap: break-word;
+        }
+        .message-time {
+            font-size: 0.8em;
+            color: #666;
+            margin-left: auto;
+        }
+        .input-container {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+        #user-input {
+            flex: 1;
+            margin-right: 10px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+        }
+        #send-button {
+            padding: 8px 20px;
+            border: none;
+            border-radius: 20px;
+            background-color: #25D366;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-messages" id="chat-messages">
+            <div class="message user-message">
+                <img src="https://w7.pngwing.com/pngs/529/816/png-transparent-computer-icons-user-profile-avatar-heroes-monochrome-black.png" alt="Profile Picture" class="profile-pic">
+                <div class="message-text">Fulana</div>
+            </div>
+            <div class="chat-container">
+                <div class="chat-messages" id="chat-messages">
+                    <div class="message user-message">
+                        <img src="https://w7.pngwing.com/pngs/529/816/png-transparent-computer-icons-user-profile-avatar-heroes-monochrome-black.png" alt="Profile Picture" class="profile-pic">
+                        <div class="message-text">Hola</div>
+                        <div class="message-time">10:00 AM</div>
+                    </div>
+                    <div class="message user-message">
+                        <img src="https://w7.pngwing.com/pngs/529/816/png-transparent-computer-icons-user-profile-avatar-heroes-monochrome-black.png" alt="Profile Picture" class="profile-pic">
+                        <div class="message-text">¿que tal?</div>
+                        <div class="message-time">10:00 AM</div>
+                    </div>
+            <div class="message">
+                <img src="https://w7.pngwing.com/pngs/529/816/png-transparent-computer-icons-user-profile-avatar-heroes-monochrome-black.png" alt="Profile Picture" class="profile-pic">
+                <div class="message-text">Hola</div>
+                <div class="message-time">10:01 AM</div>
+            </div>
+            <div class="message">
+                <img src="https://w7.pngwing.com/pngs/529/816/png-transparent-computer-icons-user-profile-avatar-heroes-monochrome-black.png" alt="Profile Picture" class="profile-pic">
+                <div class="message-text">Bien</div>
+                <div class="message-time">10:01 AM</div>
+            </div>
+        </div>
+        <form id="message-form" class="input-container" action="#" method="post">
+            <input type="text" id="user-input" name="user-input" placeholder="Escribe algo...">
+            <button type="submit" id="send-button">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
